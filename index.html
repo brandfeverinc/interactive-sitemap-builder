@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Build Sitemap</title>
+</head>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script type="text/javascript" src="Downloadify/js/swfobject.js"></script>
+<script type="text/javascript" src="Downloadify/js/downloadify.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="js/fancyapps-fancyBox/source/jquery.fancybox.css"></script>
+<link rel="stylesheet" href="css/style.css">
+
+<body>
+
+<div class="header">
+	<div class="wrapper">
+		<h2 class="logo"><a href="/sitemap/" class="btn btn-large btn-primary"><i class="icon-sitemap"></i> Sitemap</a></h2>
+		<div class="btn-toolbar utility-menu">
+			<div class="btn-group">
+				<a href="#about" class="about btn fancybox" title="About"><i class="icon-info-sign"></i></a>
+				<a href="#share" class="href btn fancybox" title="Share Link"><i class="icon-link"></i></a>
+				<a href="#" class="print btn" title="Print"><i class="icon-print"></i></a>
+				<a href="#export" class="export btn fancybox" title="Export"><i class="icon-download-alt"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrapper">
+	<div class="page">
+		
+		<ul class="utility subs" data-level="0"></ul>
+		<ul class="main subs" data-level="0"></ul>
+		<ul class="footer subs" data-level="0"></ul>
+
+	</div>
+</div>
+<div class="hide">
+	<div id="about">
+		<h3>Build Sitemap</h3>
+		<p>This interactive sitemap tool can be used to create a <i class="icon-sitemap"></i> sitemap to show a site architecture and structure.</p>
+		<p>Share a sitemap with others via a stupidly long href with all the details embedded in the hash, click the <i class="icon-link"></i> share  button.</p>
+		<h3>Print</h3>
+		<p><i class="icon-print"></i> Print the sitemap for meetings or archiving or if you really need to ge tthe lead out and draw on it</p>
+		<h3>Export to WP</h3>
+		<p>Once complete, <i class="icon-download-alt"></i> download the sitemap structure to a WordPress import xml file. Complete with pages in the mapped hierarchy and a primary menu of the same.</p>
+		<h3>Credits</h3>
+		<p>Built with 
+			<a href="http://twitter.github.io/bootstrap/" target="_blank"><i class="icon-twitter"></i> bootstrap</a>, 
+			<a href="http://fortawesome.github.io/Font-Awesome/" target="_blank"><i class="icon-flag"></i> font awesome</a>, 
+			<a href="http://jquery.com/" target="_blank"><i class="icon-code"></i> jquery</a>, 
+			<a href="http://jqueryui.com/" target="_blank"><i class="icon-code"></i> jqueryui</a>, 
+			<a href="hhttp://fancyapps.com/fancybox/" target="_blank"><i class="icon-puzzle-piece"></i> fancybox</a>, 
+			<a href="https://github.com/dcneiner/Downloadify" target="_blank"><i class="icon-github"></i> downloadify (for now)</a>, 
+			<a href="http://en.wikipedia.org/wiki/HTML5" target="_blank"><i class="icon-html5"></i> html5</a>, 
+			<a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3" target="_blank"><i class="icon-css3"></i> css3</a> and 
+			<a href="http://www.brandfeverinc.com" target="_blank"><i class="icon-heart"></i> love</a>. 
+		Use at your own risk, no fault here if it melts your face.</p>
+		<h3>Enjoy!</h3>
+	</div>
+
+	<div id="share">
+		<h3>Click or copy link</h3>
+		<a class="hash_href" target="_blank" href="#">Copy link</a>
+		<textarea class="hash"></textarea>
+	</div>
+
+	<div id="export">
+		<h3>Download xml</h3>
+		<p>To import this information into a WordPress site follow these steps</p>
+		<ol>
+			<li>Log in to that site as an administrator. (we recommend a fresh instance)</li>
+			<li>Go to Tools: Import in the WordPress admin panel.</li>
+			<li>Install the 'WordPress' importer from the list.</li>
+			<li>Activate & Run Importer.</li>
+			<li>Upload this file using the form provided on that page.</li>
+			<li>You will first be asked to map the authors in this export file to users on the site. For each author, you may choose to map to an existing user on the site or to create a new user.</li>
+			<li>WordPress will then import each of the posts, pages, comments, categories, etc. contained in this file into your site.</li>
+		</ol>
+		<a href="#" class="download">Download</a>
+		<textarea class="xml hide"></textarea>
+	</div>
+</div>
+<div class="footer">
+	<div class="wrapper">
+	</div>
+</div>
+</body>
+</html>
