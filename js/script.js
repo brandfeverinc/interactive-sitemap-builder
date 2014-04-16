@@ -65,7 +65,9 @@ jQuery(function($){
 		$('.hash').text(location.href);
 	}
 	function read_hash(){
-		nodes = location.hash.substr(1,location.hash.length-2).split('|');
+		//decode the url in case it's been encoded
+		url = decodeURIComponent(location.hash.replace(/\+/g,  " "));
+		nodes = url.substr(1,location.hash.length-2).split('|');
 		for (var i=0; i<nodes.length;i++){
 			//console.log(i, nodes[i]);
 			nodes[i] = nodes[i].split(',');
