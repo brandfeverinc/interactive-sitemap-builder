@@ -62,7 +62,17 @@ jQuery(function($){
 		});
 		location.hash = location_hash;
 		$('.hash_href').attr('href', location.href);
-		$('.hash').text(location.href);
+		$('.hash').val(location.href);
+		
+		//shorturl
+		var long_url = 'http://brandfeverinc.github.io/interactive-sitemap-builder/#'+location_hash;
+		var bitly_api_url = 'https://api-ssl.bitly.com/v3/shorten?access_token=967ae71a7a87bcf4588673f2feadbd8a5525449b&longUrl='+escape(long_url);
+		$.getJSON(bitly_api_url, function(json){
+			console.log(json.data.url);
+			$('.hash_href').attr('href', json.data.url);
+			$('.hash').val(json.data.url);
+		});
+
 	}
 	function read_hash(){
 		//decode the url in case it's been encoded
@@ -96,7 +106,7 @@ jQuery(function($){
 		if (id == undefined){ id = count + 1000; }
 		if (value == undefined){ value = "Page " + count; }
 
-		console.log('pid', pid, 'level', level, 'id', id, 'value', value, 'count', count);
+		// console.log('pid', pid, 'level', level, 'id', id, 'value', value, 'count', count);
 
 		$('#node_'+pid+ ' > ul').append( get_empty_node(level, pid, id, value) );
 		
@@ -108,7 +118,7 @@ jQuery(function($){
 		$('#node_' + (count-1) + ' input').focus().select();
 
 		//keep fresh the xml
-		$('.xml').text( make_xml() );
+		// $('.xml').text( make_xml() );
 		//reset_hash();
 	}
 	//level/depth

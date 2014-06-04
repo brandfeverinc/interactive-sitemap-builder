@@ -231,16 +231,13 @@ ul {
 	margin: 1em 0 0;
 	cursor:pointer;
 }
-.hash {
+input.hash {
 	font-family: Lucinda, console, monospace;
-	border: 1px solid #333;
-	padding: 10px;
-	width: 90%;
-	height: 60px;
-	font-size: 10px;
-	line-height: 1.1em;
+	padding: 16px;
+	width: 80%;
+	font-size: 14px;
 	color: #555;
-	margin: 1em 0;
+	margin: 1em;
 }
 
 .xml {
